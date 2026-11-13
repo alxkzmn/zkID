@@ -1,0 +1,28 @@
+Input: /workspace/zkID-halo2curves-patch/verification/ecdsa-spartan2/experiments/halo2curves-a796eae/artifacts/ecdsa_spartan2.llbc
+SHA256: dc556cb5daf8238355265b91a35f11d7a1d7e81ed09a9239d1877c47c9ef870c
+Extraction validation: passed (not a Lean translation or correctness proof)
+Serialized LLBC function declarations: 619
+Structured declaration bodies: 2; opaque declarations: 617; other declaration bodies: 0
+Metric scope: Counts describe serialized LLBC function declarations. Charon may retain auxiliary declarations for pretty-printing; these counts do not establish exact reachable-body coverage or runtime coverage.
+Target: ecdsa_spartan2::prover::verify_linked (id 11, structured, no item errors)
+Target source: {"begin": {"col": 0, "line": 434}, "end": {"col": 1, "line": 451}, "file": "src/prover.rs", "file_id": 5}
+
+Serialized function declarations with structured bodies (impl signatures abbreviated; IDs disambiguate):
+- id 11: ecdsa_spartan2::prover::verify_linked
+- id 52: Tuple[2]::{impl trait#23}::DropGlue
+
+Opaque Spartan verification declarations:
+- id 20: spartan2::zk_spartan::{impl trait#8}::verify
+
+Target direct Spartan verify callsites (syntactic Call nodes): 2 -> opaque id 20: spartan2::zk_spartan::{impl trait#8}::verify
+Direct-call metric scope: Literal syntactic Call nodes in the target body with direct Regular/Fun callees, grouped by declaration ID. Generic signature references and drop function references are not calls; these counts do not establish dynamic execution counts or reachable runtime coverage.
+
+Relevant halo2curves declarations:
+- Type id 56: halo2curves::curve::Coordinates
+- TraitDecl id 43: halo2curves::curve::CurveAffine
+- TraitDecl id 76: halo2curves::curve::CurveExt
+
+First mixed-group diagnostic names:
+- none found
+
+Foreign opaque functions have signatures only; their implementations are not extracted.

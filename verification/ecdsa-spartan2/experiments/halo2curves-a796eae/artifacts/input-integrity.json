@@ -1,0 +1,149 @@
+{
+  "baseline_helper_sha256": "c18dfedbd663d19cfb080658ce2bf9855c79fd5282b1a9d0cf4fd120c1c490c4",
+  "cargo_configuration": {
+    "applicable_manifests": [
+      {
+        "path": "/workspace/zkID-halo2curves-patch/wallet-unit-poc/ecdsa-spartan2/Cargo.toml",
+        "sha256": "41fbd1bd4f48374978b23239bae6ef0f17d776e4d52d8af88c6b987ce8fc91ab",
+        "top_level_names": [
+          "bin",
+          "build-dependencies",
+          "dependencies",
+          "features",
+          "lib",
+          "package",
+          "patch",
+          "profile"
+        ]
+      }
+    ],
+    "cargo_home": "/workspace/formal-tools/cargo",
+    "configs": [
+      {
+        "build_default_features": false,
+        "path": "/workspace/zkID-halo2curves-patch/wallet-unit-poc/ecdsa-spartan2/.cargo/config.toml",
+        "sha256": "2028f8f48c5f5846a8d4b82ef690cd504fcd52da3f659bb723a27c73821d6fee",
+        "top_level_names": [
+          "build"
+        ]
+      }
+    ],
+    "override_environment_names": []
+  },
+  "dependencies": {
+    "halo2curves_fork": {
+      "allowed_untracked_markers": [
+        ".cargo-ok"
+      ],
+      "checkout": "/workspace/formal-tools/cargo/git/checkouts/halo2curves-2fab85f9a554e0f3/a796eae",
+      "file_manifest": "fork-files.sha256",
+      "file_manifest_sha256": "332ddf34910670f1f0eae1b36c21727258a02291075fd74a2ee0465f7b91650e",
+      "git_object_format": "sha1",
+      "git_status": [
+        "?? .cargo-ok"
+      ],
+      "head": "a796eae54af4dda7f672c243a36fd9729d59944e",
+      "resolved_manifests": {
+        "halo2curves": "/workspace/formal-tools/cargo/git/checkouts/halo2curves-2fab85f9a554e0f3/a796eae/Cargo.toml",
+        "halo2derive": "/workspace/formal-tools/cargo/git/checkouts/halo2curves-2fab85f9a554e0f3/a796eae/derive/Cargo.toml"
+      },
+      "tracked_bytes_match_head": true,
+      "tracked_file_count": 106,
+      "tree": "f029c5da372b807a016c4ca06abe8b1cec997f04"
+    },
+    "spartan2": {
+      "allowed_untracked_markers": [
+        ".cargo-ok"
+      ],
+      "checkout": "/workspace/formal-tools/cargo/git/checkouts/spartan2-44f7102e5f8bf4df/d687dbb",
+      "file_manifest": "spartan2-files.sha256",
+      "file_manifest_sha256": "257e0c01680eb719ed320c053aa4fa1ecc5a2bf9129f14b818cddb198c293dca",
+      "git_object_format": "sha1",
+      "git_status": [
+        "?? .cargo-ok"
+      ],
+      "head": "d687dbb639eccbdd21e62fecec97c5826bc4dbbf",
+      "manifest_path": "/workspace/formal-tools/cargo/git/checkouts/spartan2-44f7102e5f8bf4df/d687dbb/Cargo.toml",
+      "package_id": "git+https://github.com/0xVikasRushi/Spartan2.git?branch=openac-sdk#spartan2@0.4.0",
+      "tracked_bytes_match_head": true,
+      "tracked_file_count": 48,
+      "tree": "0e603b48ed1616753fd15b93109a297644590038",
+      "version": "0.4.0"
+    }
+  },
+  "resolved_packages": {
+    "halo2curves": {
+      "id": "git+https://github.com/alxkzmn/halo2curves.git?rev=a796eae54af4dda7f672c243a36fd9729d59944e#halo2curves@0.9.0",
+      "manifest_path": "/workspace/formal-tools/cargo/git/checkouts/halo2curves-2fab85f9a554e0f3/a796eae/Cargo.toml",
+      "source": "git+https://github.com/alxkzmn/halo2curves.git?rev=a796eae54af4dda7f672c243a36fd9729d59944e#a796eae54af4dda7f672c243a36fd9729d59944e",
+      "version": "0.9.0"
+    },
+    "halo2derive": {
+      "id": "git+https://github.com/alxkzmn/halo2curves.git?rev=a796eae54af4dda7f672c243a36fd9729d59944e#halo2derive@0.2.0",
+      "manifest_path": "/workspace/formal-tools/cargo/git/checkouts/halo2curves-2fab85f9a554e0f3/a796eae/derive/Cargo.toml",
+      "source": "git+https://github.com/alxkzmn/halo2curves.git?rev=a796eae54af4dda7f672c243a36fd9729d59944e#a796eae54af4dda7f672c243a36fd9729d59944e",
+      "version": "0.2.0"
+    },
+    "spartan2": {
+      "id": "git+https://github.com/0xVikasRushi/Spartan2.git?branch=openac-sdk#spartan2@0.4.0",
+      "manifest_path": "/workspace/formal-tools/cargo/git/checkouts/spartan2-44f7102e5f8bf4df/d687dbb/Cargo.toml",
+      "source": "git+https://github.com/0xVikasRushi/Spartan2.git?branch=openac-sdk#d687dbb639eccbdd21e62fecec97c5826bc4dbbf",
+      "version": "0.4.0"
+    }
+  },
+  "schema_version": 1,
+  "source_contract": {
+    "baseline_commit": "cc1955665e58d815950ef8387071af04ae6c4486",
+    "lockfile": {
+      "accepted_changes": [
+        {
+          "name": "halo2curves",
+          "removed_registry_checksum": "f82f3e7809d6118c2afbde9667b3ba5c7621723df3729cc2157fac39121ecb62",
+          "source_after": "git+https://github.com/alxkzmn/halo2curves.git?rev=a796eae54af4dda7f672c243a36fd9729d59944e#a796eae54af4dda7f672c243a36fd9729d59944e",
+          "source_before": "registry+https://github.com/rust-lang/crates.io-index",
+          "version": "0.9.0"
+        },
+        {
+          "name": "halo2derive",
+          "removed_registry_checksum": "a0d74794c1b24716c5abf5d6bfd98ee3c2d346bc67da374ba21d80adb38c336c",
+          "source_after": "git+https://github.com/alxkzmn/halo2curves.git?rev=a796eae54af4dda7f672c243a36fd9729d59944e#a796eae54af4dda7f672c243a36fd9729d59944e",
+          "source_before": "registry+https://github.com/rust-lang/crates.io-index",
+          "version": "0.2.0"
+        }
+      ],
+      "actual_sha256": "b01a54595c96176e838691135291f7c4a652f53be6f96d633f536b12ccc0701f",
+      "baseline_sha256": "8948a2771f85076fba88b210f86edf4552497ef2d99b9121e306e76c1ba32cde",
+      "path": "wallet-unit-poc/ecdsa-spartan2/Cargo.lock"
+    },
+    "manifest": {
+      "accepted_patch": {
+        "crates-io": {
+          "halo2curves": {
+            "git": "https://github.com/alxkzmn/halo2curves.git",
+            "rev": "a796eae54af4dda7f672c243a36fd9729d59944e"
+          }
+        }
+      },
+      "actual_sha256": "41fbd1bd4f48374978b23239bae6ef0f17d776e4d52d8af88c6b987ce8fc91ab",
+      "baseline_sha256": "4a4663df23ca76776a7b3053a2ad5e8bd3391a4f1f8e3087e7e311be38a1c700",
+      "path": "wallet-unit-poc/ecdsa-spartan2/Cargo.toml"
+    },
+    "unchanged_application_file_sha256": {
+      "wallet-unit-poc/ecdsa-spartan2/.cargo/config.toml": "2028f8f48c5f5846a8d4b82ef690cd504fcd52da3f659bb723a27c73821d6fee",
+      "wallet-unit-poc/ecdsa-spartan2/build.rs": "0b4af030f4529d02ff167d34a0bf16a66cb64265b2da7110244643793c7c8b9c",
+      "wallet-unit-poc/ecdsa-spartan2/src/circuit_size.rs": "3a8f16230250f35565fb21a532ff2feda105af7e720aed53722ee2739be784b3",
+      "wallet-unit-poc/ecdsa-spartan2/src/circuits/mdoc_circuit.rs": "e5cf874d950181b8afb29ad9895d6d2cd7c68704f7e69b3debd94144dcbacbd8",
+      "wallet-unit-poc/ecdsa-spartan2/src/circuits/mod.rs": "7140f5a40a8fc71b7074f2f46cd9e696c204cbc5a3b51b6b1af7331bc029d139",
+      "wallet-unit-poc/ecdsa-spartan2/src/circuits/prepare_circuit.rs": "6060d48a41d0b4eb68311791770c7a99c5df4be6516e34137141980b87d9bc8d",
+      "wallet-unit-poc/ecdsa-spartan2/src/circuits/show_circuit.rs": "8f8d0e95556e971cea70f17de2ebb4b10cfc64f41ac7486c33215f52ad87f57e",
+      "wallet-unit-poc/ecdsa-spartan2/src/lib.rs": "a3f4ed0f3dfed905fe6807033363b0064cff30e6d44549362d78884bd21b2838",
+      "wallet-unit-poc/ecdsa-spartan2/src/main.rs": "c50a985190c6a600faff21012301d53500be125a561148724bf11ee78dabd878",
+      "wallet-unit-poc/ecdsa-spartan2/src/paths.rs": "4d39fcfc317b707a05e7e04822b7002a5844a6366446b9dacc3bd8f38d29e785",
+      "wallet-unit-poc/ecdsa-spartan2/src/prover.rs": "65c4316f8352a27948e52aeca5464157fe67119c0538b40d870c7661bcbd505b",
+      "wallet-unit-poc/ecdsa-spartan2/src/setup.rs": "0781ca6cce6075bb43ded48b53c3a155d56ab2471f6d2cecb175d185cdf81fc8",
+      "wallet-unit-poc/ecdsa-spartan2/src/utils.rs": "a6264ed02d277d14beae7ab41d1a7f023c009c1bc18249eabc3935f08a3741fa",
+      "wallet-unit-poc/ecdsa-spartan2/tests/witness_layout.rs": "76822f2d5f9a9172a3ea73f547dd0c0edda71018fd14d425a0a0748f7c31b462"
+    }
+  },
+  "status": "verified"
+}

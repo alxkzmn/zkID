@@ -40,3 +40,6 @@ witnesscalc-adapter = { git = "https://github.com/zkmopro/witnesscalc_adapter.gi
 
 [profile.release]
 debug = true
+
+[patch.crates-io]
+halo2curves = { git = "https://github.com/alxkzmn/halo2curves.git", rev = "a796eae54af4dda7f672c243a36fd9729d59944e" }

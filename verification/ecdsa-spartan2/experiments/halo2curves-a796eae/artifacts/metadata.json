@@ -1,0 +1,176 @@
+{
+  "allowed_changes": [
+    "wallet-unit-poc/ecdsa-spartan2/Cargo.toml",
+    "wallet-unit-poc/ecdsa-spartan2/Cargo.lock"
+  ],
+  "application_rust_sources_unchanged": true,
+  "baseline_commit": "cc1955665e58d815950ef8387071af04ae6c4486",
+  "compression": {
+    "argv": [
+      "gzip",
+      "-n",
+      "-c",
+      "/workspace/zkID-halo2curves-patch/verification/ecdsa-spartan2/experiments/halo2curves-a796eae/artifacts/ecdsa_spartan2.llbc"
+    ],
+    "compressed_sha256": "3b581d514975761e4cc24d4458c87f8b22bfbf6ba019c73ba1dfab6499854b26",
+    "uncompressed_sha256": "dc556cb5daf8238355265b91a35f11d7a1d7e81ed09a9239d1877c47c9ef870c"
+  },
+  "generated_lean_files": [],
+  "halo2curves_commit": "a796eae54af4dda7f672c243a36fd9729d59944e",
+  "harness_capture_status": "complete",
+  "harness_exit_status": 1,
+  "input_integrity_sha256": {
+    "fork-files.sha256": "332ddf34910670f1f0eae1b36c21727258a02291075fd74a2ee0465f7b91650e",
+    "input-integrity.json": "a144f410b98d3332894fbeacaa2bc68f1479cf8faabc82d5343166e4712b8745",
+    "spartan2-files.sha256": "257e0c01680eb719ed320c053aa4fa1ecc5a2bf9129f14b818cddb198c293dca"
+  },
+  "inputs_unchanged_during_capture": true,
+  "pipeline_status": "failed",
+  "recorded_at_utc": "2026-11-13T15:06:01.567427+00:00",
+  "rust_test_result_lines": [
+    "test result: ok. 14 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s"
+  ],
+  "rust_test_skip_messages": [
+    "/workspace/zkID-halo2curves-patch/wallet-unit-poc/ecdsa-spartan2/../circom/build/jwt_1k/jwt_1k.sym not found; skipping (recompile the circuit first).",
+    "/workspace/zkID-halo2curves-patch/wallet-unit-poc/ecdsa-spartan2/../circom/build/mdoc/mdoc.sym not found; skipping (recompile the circuit first).",
+    "show.sym not found at /workspace/zkID-halo2curves-patch/wallet-unit-poc/ecdsa-spartan2/../circom/build/show/show.sym; skipping (run `bash ../circom/scripts/compile.sh show`)."
+  ],
+  "schema_version": 1,
+  "scope": "Same verifier wrapper and extraction settings; one pinned dependency patch. Opaque calls and serialized declaration counts do not establish cryptographic correctness or exact reachable-body coverage.",
+  "stages": [
+    {
+      "CARGO_TARGET_DIR": "/workspace/formal-tools/target",
+      "argv": [
+        "cargo",
+        "metadata",
+        "--locked",
+        "--no-default-features",
+        "--format-version",
+        "1",
+        "--offline"
+      ],
+      "cwd": "/workspace/zkID-halo2curves-patch/wallet-unit-poc/ecdsa-spartan2",
+      "duration_seconds": 0.227,
+      "exit_status": 0,
+      "log": "cargo-metadata.log",
+      "name": "cargo-metadata"
+    },
+    {
+      "argv": [
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python3",
+        "/workspace/zkID-halo2curves-patch/verification/ecdsa-spartan2/experiments/halo2curves-a796eae/verify_inputs.py",
+        "/workspace/zkID-halo2curves-patch",
+        "/workspace/zkID-halo2curves-patch/verification/ecdsa-spartan2/experiments/halo2curves-a796eae/artifacts/.cargo-metadata.json",
+        "/workspace/zkID-halo2curves-patch/verification/ecdsa-spartan2/experiments/halo2curves-a796eae/artifacts"
+      ],
+      "cwd": "/workspace/zkID-halo2curves-patch/wallet-unit-poc/ecdsa-spartan2",
+      "duration_seconds": 0.269,
+      "exit_status": 0,
+      "log": "input-integrity.log",
+      "name": "input-integrity"
+    },
+    {
+      "CARGO_TARGET_DIR": "/workspace/formal-tools/target",
+      "argv": [
+        "cargo",
+        "test",
+        "--locked",
+        "--lib",
+        "--no-default-features",
+        "--",
+        "--nocapture"
+      ],
+      "cwd": "/workspace/zkID-halo2curves-patch/wallet-unit-poc/ecdsa-spartan2",
+      "duration_seconds": 14.191,
+      "exit_status": 0,
+      "log": "rust-tests.log",
+      "name": "rust-tests"
+    },
+    {
+      "CARGO_TARGET_DIR": "/workspace/formal-tools/target-charon-miri",
+      "argv": [
+        "charon",
+        "cargo",
+        "--preset=aeneas",
+        "--sysroot",
+        "miri",
+        "--start-from",
+        "ecdsa_spartan2::prover::verify_linked",
+        "--dest-file",
+        "/workspace/zkID-halo2curves-patch/verification/ecdsa-spartan2/experiments/halo2curves-a796eae/artifacts/ecdsa_spartan2.llbc",
+        "--",
+        "--locked",
+        "--lib",
+        "--no-default-features"
+      ],
+      "cwd": "/workspace/zkID-halo2curves-patch/wallet-unit-poc/ecdsa-spartan2",
+      "duration_seconds": 51.269,
+      "exit_status": 0,
+      "log": "charon.log",
+      "name": "charon"
+    },
+    {
+      "argv": [
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python3",
+        "/workspace/zkID-halo2curves-patch/verification/ecdsa-spartan2/baseline/summarize_llbc.py",
+        "/workspace/zkID-halo2curves-patch/verification/ecdsa-spartan2/experiments/halo2curves-a796eae/artifacts/ecdsa_spartan2.llbc",
+        "/workspace/zkID-halo2curves-patch/verification/ecdsa-spartan2/experiments/halo2curves-a796eae/artifacts",
+        "/workspace/zkID-halo2curves-patch/verification/ecdsa-spartan2/experiments/halo2curves-a796eae/artifacts/aeneas.log"
+      ],
+      "cwd": "/workspace/zkID-halo2curves-patch/wallet-unit-poc/ecdsa-spartan2",
+      "duration_seconds": 0.191,
+      "exit_status": 0,
+      "log": "llbc-validation.log",
+      "name": "llbc-validation"
+    },
+    {
+      "argv": [
+        "aeneas",
+        "-backend",
+        "lean",
+        "-core-models-lib",
+        "-split-files",
+        "-specs",
+        "hax",
+        "-dest",
+        "/workspace/zkID-halo2curves-patch/verification/ecdsa-spartan2/experiments/halo2curves-a796eae/artifacts/lean",
+        "/workspace/zkID-halo2curves-patch/verification/ecdsa-spartan2/experiments/halo2curves-a796eae/artifacts/ecdsa_spartan2.llbc"
+      ],
+      "cwd": "/workspace/zkID-halo2curves-patch/wallet-unit-poc/ecdsa-spartan2",
+      "duration_seconds": 1.118,
+      "exit_status": 2,
+      "log": "aeneas.log",
+      "name": "aeneas"
+    },
+    {
+      "argv": [
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python3",
+        "/workspace/zkID-halo2curves-patch/verification/ecdsa-spartan2/baseline/summarize_llbc.py",
+        "/workspace/zkID-halo2curves-patch/verification/ecdsa-spartan2/experiments/halo2curves-a796eae/artifacts/ecdsa_spartan2.llbc",
+        "/workspace/zkID-halo2curves-patch/verification/ecdsa-spartan2/experiments/halo2curves-a796eae/artifacts",
+        "/workspace/zkID-halo2curves-patch/verification/ecdsa-spartan2/experiments/halo2curves-a796eae/artifacts/aeneas.log"
+      ],
+      "cwd": "/workspace/zkID-halo2curves-patch/wallet-unit-poc/ecdsa-spartan2",
+      "duration_seconds": 0.17,
+      "exit_status": 0,
+      "log": "llbc-summary.log",
+      "name": "llbc-summary"
+    },
+    {
+      "argv": [
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python3",
+        "/workspace/zkID-halo2curves-patch/verification/ecdsa-spartan2/experiments/halo2curves-a796eae/verify_inputs.py",
+        "/workspace/zkID-halo2curves-patch",
+        "/workspace/zkID-halo2curves-patch/verification/ecdsa-spartan2/experiments/halo2curves-a796eae/artifacts/.cargo-metadata.json",
+        "/tmp/halo-patch-input-recheck-tngtvmnn"
+      ],
+      "cwd": "/workspace/zkID-halo2curves-patch/wallet-unit-poc/ecdsa-spartan2",
+      "duration_seconds": 0.274,
+      "exit_status": 0,
+      "log": "input-integrity-after.log",
+      "name": "input-integrity-after"
+    }
+  ],
+  "target": "ecdsa_spartan2::prover::verify_linked",
+  "worktree_head_at_execution": "cc1955665e58d815950ef8387071af04ae6c4486"
+}

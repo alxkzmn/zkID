@@ -1,0 +1,26 @@
+cargo-metadata (exit 0)
+cargo metadata --locked --no-default-features --format-version 1 --offline
+CARGO_TARGET_DIR=/workspace/formal-tools/target
+
+input-integrity (exit 0)
+/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python3 /workspace/zkID-halo2curves-patch/verification/ecdsa-spartan2/experiments/halo2curves-a796eae/verify_inputs.py /workspace/zkID-halo2curves-patch /workspace/zkID-halo2curves-patch/verification/ecdsa-spartan2/experiments/halo2curves-a796eae/artifacts/.cargo-metadata.json /workspace/zkID-halo2curves-patch/verification/ecdsa-spartan2/experiments/halo2curves-a796eae/artifacts
+
+rust-tests (exit 0)
+cargo test --locked --lib --no-default-features -- --nocapture
+CARGO_TARGET_DIR=/workspace/formal-tools/target
+
+charon (exit 0)
+charon cargo --preset=aeneas --sysroot miri --start-from ecdsa_spartan2::prover::verify_linked --dest-file /workspace/zkID-halo2curves-patch/verification/ecdsa-spartan2/experiments/halo2curves-a796eae/artifacts/ecdsa_spartan2.llbc -- --locked --lib --no-default-features
+CARGO_TARGET_DIR=/workspace/formal-tools/target-charon-miri
+
+llbc-validation (exit 0)
+/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python3 /workspace/zkID-halo2curves-patch/verification/ecdsa-spartan2/baseline/summarize_llbc.py /workspace/zkID-halo2curves-patch/verification/ecdsa-spartan2/experiments/halo2curves-a796eae/artifacts/ecdsa_spartan2.llbc /workspace/zkID-halo2curves-patch/verification/ecdsa-spartan2/experiments/halo2curves-a796eae/artifacts /workspace/zkID-halo2curves-patch/verification/ecdsa-spartan2/experiments/halo2curves-a796eae/artifacts/aeneas.log
+
+aeneas (exit 2)
+aeneas -backend lean -core-models-lib -split-files -specs hax -dest /workspace/zkID-halo2curves-patch/verification/ecdsa-spartan2/experiments/halo2curves-a796eae/artifacts/lean /workspace/zkID-halo2curves-patch/verification/ecdsa-spartan2/experiments/halo2curves-a796eae/artifacts/ecdsa_spartan2.llbc
+
+llbc-summary (exit 0)
+/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python3 /workspace/zkID-halo2curves-patch/verification/ecdsa-spartan2/baseline/summarize_llbc.py /workspace/zkID-halo2curves-patch/verification/ecdsa-spartan2/experiments/halo2curves-a796eae/artifacts/ecdsa_spartan2.llbc /workspace/zkID-halo2curves-patch/verification/ecdsa-spartan2/experiments/halo2curves-a796eae/artifacts /workspace/zkID-halo2curves-patch/verification/ecdsa-spartan2/experiments/halo2curves-a796eae/artifacts/aeneas.log
+
+input-integrity-after (exit 0)
+/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python3 /workspace/zkID-halo2curves-patch/verification/ecdsa-spartan2/experiments/halo2curves-a796eae/verify_inputs.py /workspace/zkID-halo2curves-patch /workspace/zkID-halo2curves-patch/verification/ecdsa-spartan2/experiments/halo2curves-a796eae/artifacts/.cargo-metadata.json /tmp/halo-patch-input-recheck-tngtvmnn

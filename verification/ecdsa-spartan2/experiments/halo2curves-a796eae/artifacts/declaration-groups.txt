@@ -1,0 +1,1 @@
+No mixed declaration group diagnostic was found in the supplied Aeneas log.

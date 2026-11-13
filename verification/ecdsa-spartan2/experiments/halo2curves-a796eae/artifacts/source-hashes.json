@@ -1,0 +1,18 @@
+{
+  "wallet-unit-poc/ecdsa-spartan2/.cargo/config.toml": "2028f8f48c5f5846a8d4b82ef690cd504fcd52da3f659bb723a27c73821d6fee",
+  "wallet-unit-poc/ecdsa-spartan2/Cargo.lock": "b01a54595c96176e838691135291f7c4a652f53be6f96d633f536b12ccc0701f",
+  "wallet-unit-poc/ecdsa-spartan2/Cargo.toml": "41fbd1bd4f48374978b23239bae6ef0f17d776e4d52d8af88c6b987ce8fc91ab",
+  "wallet-unit-poc/ecdsa-spartan2/build.rs": "0b4af030f4529d02ff167d34a0bf16a66cb64265b2da7110244643793c7c8b9c",
+  "wallet-unit-poc/ecdsa-spartan2/src/circuit_size.rs": "3a8f16230250f35565fb21a532ff2feda105af7e720aed53722ee2739be784b3",
+  "wallet-unit-poc/ecdsa-spartan2/src/circuits/mdoc_circuit.rs": "e5cf874d950181b8afb29ad9895d6d2cd7c68704f7e69b3debd94144dcbacbd8",
+  "wallet-unit-poc/ecdsa-spartan2/src/circuits/mod.rs": "7140f5a40a8fc71b7074f2f46cd9e696c204cbc5a3b51b6b1af7331bc029d139",
+  "wallet-unit-poc/ecdsa-spartan2/src/circuits/prepare_circuit.rs": "6060d48a41d0b4eb68311791770c7a99c5df4be6516e34137141980b87d9bc8d",
+  "wallet-unit-poc/ecdsa-spartan2/src/circuits/show_circuit.rs": "8f8d0e95556e971cea70f17de2ebb4b10cfc64f41ac7486c33215f52ad87f57e",
+  "wallet-unit-poc/ecdsa-spartan2/src/lib.rs": "a3f4ed0f3dfed905fe6807033363b0064cff30e6d44549362d78884bd21b2838",
+  "wallet-unit-poc/ecdsa-spartan2/src/main.rs": "c50a985190c6a600faff21012301d53500be125a561148724bf11ee78dabd878",
+  "wallet-unit-poc/ecdsa-spartan2/src/paths.rs": "4d39fcfc317b707a05e7e04822b7002a5844a6366446b9dacc3bd8f38d29e785",
+  "wallet-unit-poc/ecdsa-spartan2/src/prover.rs": "65c4316f8352a27948e52aeca5464157fe67119c0538b40d870c7661bcbd505b",
+  "wallet-unit-poc/ecdsa-spartan2/src/setup.rs": "0781ca6cce6075bb43ded48b53c3a155d56ab2471f6d2cecb175d185cdf81fc8",
+  "wallet-unit-poc/ecdsa-spartan2/src/utils.rs": "a6264ed02d277d14beae7ab41d1a7f023c009c1bc18249eabc3935f08a3741fa",
+  "wallet-unit-poc/ecdsa-spartan2/tests/witness_layout.rs": "76822f2d5f9a9172a3ea73f547dd0c0edda71018fd14d425a0a0748f7c31b462"
+}

@@ -1,0 +1,35 @@
+{
+  "historical_aeneas": {
+    "archive_log_matches_retry": true,
+    "archived_as": "aeneas-translation-failure.log",
+    "argv": [
+      "aeneas",
+      "-backend",
+      "lean",
+      "-core-models-lib",
+      "-split-files",
+      "-specs",
+      "hax",
+      "-dest",
+      "/workspace/formal-tools/openac-extraction/lean",
+      "/workspace/formal-tools/openac-extraction/ecdsa_spartan2.llbc"
+    ],
+    "combined_log": "/workspace/formal-tools/openac-aeneas-hax-models.log",
+    "command_item": "exec-21ae7c86-31e8-406b-9d98-fc06cdc61ac0",
+    "earlier_variant": "openac-aeneas.log omitted -core-models-lib -specs hax; not replayed.",
+    "historical_numeric_exit_status": null,
+    "recovery": "Exact argv supplied from the original setup chat by the delegating user.",
+    "source_chat": "01a1c5b6-42f2-76ee-9f7c-5d19041ec0bc"
+  },
+  "prepared_files_sha256": {
+    "/workspace/formal-tools/artifacts/openac-verifier-extraction.tar.gz": "a4f2269103e47ea821587d2d46362edd26d35c266e3e8c7ab95966f1ee180a25",
+    "/workspace/formal-tools/artifacts/openac-verifier-extraction/aeneas-translation-failure.log": "7b04b7b0db88f1f37ab3db84497ea98d1c5b7108196bbff035f82d3a21e1e487",
+    "/workspace/formal-tools/artifacts/openac-verifier-extraction/metadata.json": "3a669cc10f567cbd560afdb5be3b4b8c7125811c598360982507a62d4a363268",
+    "/workspace/formal-tools/artifacts/openac-verifier-extraction/regenerate.sh": "3e0e3fe92cf3e628268195cccb05d071d86d2cb145a57486ffc3311d4c4cffc4",
+    "/workspace/formal-tools/env.sh": "28787b2faf08b9ccd37a00f5c4d25e5c90fc05992089c3def7a72c6d198fc1e3",
+    "/workspace/formal-tools/extract-openac.sh": "3e0e3fe92cf3e628268195cccb05d071d86d2cb145a57486ffc3311d4c4cffc4",
+    "/workspace/formal-tools/lean-check/lake-manifest.json": "771910ceebca69a96f9763bc2e3d2e559851ced62f847944fd6c07a71078910a",
+    "/workspace/formal-tools/openac-aeneas-hax-models.log": "7b04b7b0db88f1f37ab3db84497ea98d1c5b7108196bbff035f82d3a21e1e487",
+    "/workspace/formal-tools/start.md": "74122b90ed1047cac75211f13236f30fa95f6a9acd6fe61926eab8c054cd0895"
+  }
+}
