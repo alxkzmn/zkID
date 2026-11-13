@@ -1,0 +1,114 @@
+warning: unused config key `build.default-features` in `/workspace/zkID-verifier-extraction/wallet-unit-poc/ecdsa-spartan2/.cargo/config.toml`
+warning: unexpected `cfg` condition name: `has_circuit_base`
+  --> src/circuits/prepare_circuit.rs:17:39
+   |
+17 | #[cfg(all(feature = "native-witness", has_circuit_base))]
+   |                                       ^^^^^^^^^^^^^^^^ help: there is a config with a similar name: `has_circuit_4k`
+   |
+   = help: consider using a Cargo feature instead
+   = help: or consider adding in `Cargo.toml` the `check-cfg` lint config for the lint:
+            [lints.rust]
+            unexpected_cfgs = { level = "warn", check-cfg = ['cfg(has_circuit_base)'] }
+   = help: or consider adding `println!("cargo::rustc-check-cfg=cfg(has_circuit_base)");` to the top of the `build.rs`
+   = note: see <https://doc.rust-lang.org/nightly/rustc/check-cfg/cargo-specifics.html> for more information about checking conditional configuration
+   = note: `#[warn(unexpected_cfgs)]` on by default
+
+warning: unused import: `tracing::info`
+  --> src/circuits/show_circuit.rs:14:5
+   |
+14 | use tracing::info;
+   |     ^^^^^^^^^^^^^
+   |
+   = note: `#[warn(unused_imports)]` (part of `#[warn(unused)]`) on by default
+
+warning: unused import: `fs::File`
+ --> src/prover.rs:4:11
+  |
+4 | use std::{fs::File, path::Path};
+  |           ^^^^^^^^
+
+warning: unused import: `crate::utils::parse_witness`
+  --> src/prover.rs:17:5
+   |
+17 | use crate::utils::parse_witness;
+   |     ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+warning: unused imports: `hashmap_to_json_string`, `mdoc_hashmap_to_json_string`, `parse_jwt_inputs`, and `parse_mdoc_inputs`
+  --> src/prover.rs:25:13
+   |
+25 |     utils::{hashmap_to_json_string, mdoc_hashmap_to_json_string, parse_jwt_inputs, parse_mdoc_inputs},
+   |             ^^^^^^^^^^^^^^^^^^^^^^  ^^^^^^^^^^^^^^^^^^^^^^^^^^^  ^^^^^^^^^^^^^^^^  ^^^^^^^^^^^^^^^^^
+
+warning: unused import: `serde_json::Value`
+  --> src/prover.rs:31:5
+   |
+31 | use serde_json::Value;
+   |     ^^^^^^^^^^^^^^^^^
+
+warning: function `call_mdoc_witness` is never used
+  --> src/circuits/mdoc_circuit.rs:49:15
+   |
+49 | pub(crate) fn call_mdoc_witness(_inputs_json: &str) -> Result<Vec<u8>, SynthesisError> {
+   |               ^^^^^^^^^^^^^^^^^
+   |
+   = note: `#[warn(dead_code)]` (part of `#[warn(unused)]`) on by default
+
+warning: function `call_jwt_witness` is never used
+  --> src/circuits/prepare_circuit.rs:69:15
+   |
+69 | pub(crate) fn call_jwt_witness(
+   |               ^^^^^^^^^^^^^^^^
+
+warning: method `resolve_input_json` is never used
+   --> src/circuits/prepare_circuit.rs:137:8
+    |
+ 97 | impl PrepareCircuit {
+    | ------------------- method in this implementation
+...
+137 |     fn resolve_input_json(&self) -> PathBuf {
+    |        ^^^^^^^^^^^^^^^^^^
+
+warning: field `input_path` is never read
+  --> src/circuits/show_circuit.rs:25:5
+   |
+21 | pub struct ShowCircuit {
+   |            ----------- field in this struct
+...
+25 |     input_path: Option<PathBuf>,
+   |     ^^^^^^^^^^
+   |
+   = note: `ShowCircuit` has derived impls for the traits `Clone` and `Debug`, but these are intentionally ignored during dead code analysis
+
+warning: method `resolve_input_json` is never used
+  --> src/circuits/show_circuit.rs:71:8
+   |
+40 | impl ShowCircuit {
+   | ---------------- method in this implementation
+...
+71 |     fn resolve_input_json(&self) -> PathBuf {
+   |        ^^^^^^^^^^^^^^^^^^
+
+warning: `ecdsa-spartan2` (lib test) generated 11 warnings (run `cargo fix --lib -p ecdsa-spartan2 --tests` to apply 5 suggestions)
+    Finished `test` profile [unoptimized + debuginfo] target(s) in 0.11s
+     Running unittests src/lib.rs (/workspace/formal-tools/target/debug/deps/ecdsa_spartan2-1eb092c3056106c3)
+
+running 14 tests
+test paths::tests::test_mobile_config ... ok
+test paths::tests::test_development_config_default_size ... ok
+test paths::tests::test_mdoc_paths_skip_size_subdir ... ok
+test paths::tests::test_development_config_explicit_size ... ok
+test paths::tests::test_resolve_absolute ... ok
+test paths::tests::test_resolve_relative ... ok
+test utils::issuer_key_binding_tests::issuer_key_is_not_the_trailing_public_pair ... ok
+test utils::issuer_key_binding_tests::accepts_the_expected_issuer_key ... ok
+test utils::issuer_key_binding_tests::rejects_a_different_issuer_key ... ok
+test utils::issuer_key_binding_tests::rejects_a_partial_key_match ... ok
+test utils::issuer_key_binding_tests::rejects_a_short_public_value_vector ... /workspace/zkID-verifier-extraction/wallet-unit-poc/ecdsa-spartan2/../circom/build/jwt_1k/jwt_1k.symok
+ not found; skipping (recompile the circuit first).
+/workspace/zkID-verifier-extraction/wallet-unit-poc/ecdsa-spartan2/../circom/build/mdoc/mdoc.sym not found; skipping (recompile the circuit first).
+show.sym not found at /workspace/zkID-verifier-extraction/wallet-unit-poc/ecdsa-spartan2/../circom/build/show/show.sym; skipping (run `bash ../circom/scripts/compile.sh show`).
+test utils::issuer_key_layout_tests::public_io_indices_match_jwt_sym ... ok
+test utils::issuer_key_layout_tests::public_io_indices_match_mdoc_sym ... ok
+test utils::show_witness_indices_tests::witness_indices_match_show_sym ... ok
+
+test result: ok. 14 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s

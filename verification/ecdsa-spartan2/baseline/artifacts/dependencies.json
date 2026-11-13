@@ -1,0 +1,255 @@
+{
+  "cargo_feature_selection": [
+    "--no-default-features"
+  ],
+  "lake_manifest_sha256": "771910ceebca69a96f9763bc2e3d2e559851ced62f847944fd6c07a71078910a",
+  "lockfile_sha256": "8948a2771f85076fba88b210f86edf4552497ef2d99b9121e306e76c1ba32cde",
+  "root_enabled_features": [],
+  "root_package": "path+file:///workspace/zkID-verifier-extraction/wallet-unit-poc/ecdsa-spartan2#0.0.1",
+  "root_resolved_dependencies": [
+    {
+      "dep_kinds": [
+        {
+          "kind": null,
+          "target": null
+        }
+      ],
+      "name": "base64",
+      "pkg": "registry+https://github.com/rust-lang/crates.io-index#base64@0.22.1"
+    },
+    {
+      "dep_kinds": [
+        {
+          "kind": null,
+          "target": null
+        }
+      ],
+      "name": "bellpepper",
+      "pkg": "registry+https://github.com/rust-lang/crates.io-index#bellpepper@0.4.1"
+    },
+    {
+      "dep_kinds": [
+        {
+          "kind": null,
+          "target": null
+        }
+      ],
+      "name": "bellpepper_core",
+      "pkg": "registry+https://github.com/rust-lang/crates.io-index#bellpepper-core@0.4.0"
+    },
+    {
+      "dep_kinds": [
+        {
+          "kind": null,
+          "target": null
+        }
+      ],
+      "name": "bincode",
+      "pkg": "registry+https://github.com/rust-lang/crates.io-index#bincode@1.3.3"
+    },
+    {
+      "dep_kinds": [
+        {
+          "kind": null,
+          "target": null
+        }
+      ],
+      "name": "circom_scotia",
+      "pkg": "git+https://github.com/0xVikasRushi/circom-scotia?branch=feat%2Fspartan2#0.2.0"
+    },
+    {
+      "dep_kinds": [
+        {
+          "kind": null,
+          "target": null
+        }
+      ],
+      "name": "ff",
+      "pkg": "registry+https://github.com/rust-lang/crates.io-index#ff@0.13.1"
+    },
+    {
+      "dep_kinds": [
+        {
+          "kind": null,
+          "target": null
+        }
+      ],
+      "name": "memmap2",
+      "pkg": "registry+https://github.com/rust-lang/crates.io-index#memmap2@0.9.9"
+    },
+    {
+      "dep_kinds": [
+        {
+          "kind": null,
+          "target": null
+        }
+      ],
+      "name": "num_bigint",
+      "pkg": "registry+https://github.com/rust-lang/crates.io-index#num-bigint@0.4.6"
+    },
+    {
+      "dep_kinds": [
+        {
+          "kind": null,
+          "target": null
+        }
+      ],
+      "name": "serde",
+      "pkg": "registry+https://github.com/rust-lang/crates.io-index#serde@1.0.228"
+    },
+    {
+      "dep_kinds": [
+        {
+          "kind": null,
+          "target": null
+        }
+      ],
+      "name": "serde_json",
+      "pkg": "registry+https://github.com/rust-lang/crates.io-index#serde_json@1.0.145"
+    },
+    {
+      "dep_kinds": [
+        {
+          "kind": null,
+          "target": null
+        }
+      ],
+      "name": "sha2",
+      "pkg": "registry+https://github.com/rust-lang/crates.io-index#sha2@0.10.9"
+    },
+    {
+      "dep_kinds": [
+        {
+          "kind": null,
+          "target": null
+        }
+      ],
+      "name": "spartan2",
+      "pkg": "git+https://github.com/0xVikasRushi/Spartan2.git?branch=openac-sdk#spartan2@0.4.0"
+    },
+    {
+      "dep_kinds": [
+        {
+          "kind": null,
+          "target": null
+        }
+      ],
+      "name": "tracing",
+      "pkg": "registry+https://github.com/rust-lang/crates.io-index#tracing@0.1.41"
+    },
+    {
+      "dep_kinds": [
+        {
+          "kind": null,
+          "target": null
+        }
+      ],
+      "name": "tracing_subscriber",
+      "pkg": "registry+https://github.com/rust-lang/crates.io-index#tracing-subscriber@0.3.20"
+    }
+  ],
+  "selected_lock_packages": [
+    {
+      "dependencies": [
+        "anyhow",
+        "bellpepper-core",
+        "byteorder",
+        "cfg-if",
+        "ff",
+        "fnv",
+        "getrandom 0.2.16",
+        "itertools 0.9.0",
+        "log",
+        "ruint",
+        "serde",
+        "serde_json",
+        "thiserror 1.0.69"
+      ],
+      "name": "circom-scotia",
+      "source": "git+https://github.com/0xVikasRushi/circom-scotia?branch=feat%2Fspartan2#bd39c019dba20d32ce5727e2408632dbca269e82",
+      "version": "0.2.0"
+    },
+    {
+      "dependencies": [
+        "base64",
+        "bellpepper",
+        "bellpepper-core",
+        "bincode",
+        "circom-scotia",
+        "ff",
+        "memmap2",
+        "num-bigint 0.4.6",
+        "serde",
+        "serde_json",
+        "sha2",
+        "spartan2",
+        "tracing",
+        "tracing-subscriber",
+        "witnesscalc-adapter"
+      ],
+      "name": "ecdsa-spartan2",
+      "version": "0.0.1"
+    },
+    {
+      "checksum": "f82f3e7809d6118c2afbde9667b3ba5c7621723df3729cc2157fac39121ecb62",
+      "dependencies": [
+        "digest 0.10.7",
+        "ff",
+        "group",
+        "halo2derive",
+        "hex",
+        "lazy_static",
+        "libm",
+        "num-bigint 0.4.6",
+        "num-integer",
+        "num-traits",
+        "pairing",
+        "paste",
+        "plonky2_maybe_rayon",
+        "rand_core 0.6.4",
+        "rayon",
+        "serde",
+        "serde_arrays",
+        "sha2",
+        "static_assertions",
+        "subtle"
+      ],
+      "name": "halo2curves",
+      "source": "registry+https://github.com/rust-lang/crates.io-index",
+      "version": "0.9.0"
+    },
+    {
+      "dependencies": [
+        "bellpepper",
+        "bellpepper-core",
+        "bincode",
+        "bitvec",
+        "byteorder",
+        "digest 0.10.7",
+        "ff",
+        "flate2",
+        "generic-array",
+        "getrandom 0.2.16",
+        "group",
+        "halo2curves",
+        "itertools 0.14.0",
+        "num-bigint 0.4.6",
+        "num-integer",
+        "num-traits",
+        "once_cell",
+        "rand_core 0.6.4",
+        "rayon",
+        "serde",
+        "sha3",
+        "subtle",
+        "thiserror 2.0.18",
+        "tracing",
+        "tracing-subscriber",
+        "web-time"
+      ],
+      "name": "spartan2",
+      "source": "git+https://github.com/0xVikasRushi/Spartan2.git?branch=openac-sdk#d687dbb639eccbdd21e62fecec97c5826bc4dbbf",
+      "version": "0.4.0"
+    }
+  ]
+}

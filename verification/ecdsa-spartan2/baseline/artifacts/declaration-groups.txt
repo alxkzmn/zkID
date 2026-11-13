@@ -1,0 +1,6 @@
+[Error] Detected groups of mixed mutually recursive definitions (such as a type mutually recursive with a function, or a function mutually recursive with a trait implementation):
+
+# Group 1:
+- trait decl(Source: '/cargo/registry/src/index.crates.io-1949cf8c6b5b557f/halo2curves-0.9.0/src/curve.rs', lines 19:0-25:40): halo2curves::curve::CurveExt
+- trait decl(Source: '/cargo/registry/src/index.crates.io-1949cf8c6b5b557f/halo2curves-0.9.0/src/curve.rs', lines 72:0-81:45): halo2curves::curve::CurveAffine
+- type decl(Source: '/cargo/registry/src/index.crates.io-1949cf8c6b5b557f/halo2curves-0.9.0/src/curve.rs', lines 112:0-112:38): halo2curves::curve::Coordinates

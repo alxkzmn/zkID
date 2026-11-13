@@ -1,0 +1,36 @@
+cargo_metadata (exit 0)
+cwd: /workspace/zkID-verifier-extraction/wallet-unit-poc/ecdsa-spartan2
+CARGO_TARGET_DIR=/workspace/formal-tools/target
+cargo metadata --locked --no-default-features --format-version 1 --offline
+
+dependency_integrity (exit 0)
+cwd: /workspace/zkID-verifier-extraction/wallet-unit-poc/ecdsa-spartan2
+/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python3 /workspace/zkID-verifier-extraction/verification/ecdsa-spartan2/baseline/verify_dependencies.py /workspace/zkID-verifier-extraction /workspace/zkID-verifier-extraction/verification/ecdsa-spartan2/baseline/artifacts/.cargo-metadata.json /workspace/zkID-verifier-extraction/verification/ecdsa-spartan2/baseline/artifacts
+
+rust_tests (exit 0)
+cwd: /workspace/zkID-verifier-extraction/wallet-unit-poc/ecdsa-spartan2
+CARGO_TARGET_DIR=/workspace/formal-tools/target
+cargo test --locked --lib --no-default-features -- --nocapture
+
+charon (exit 0)
+cwd: /workspace/zkID-verifier-extraction/wallet-unit-poc/ecdsa-spartan2
+CARGO_TARGET_DIR=/workspace/formal-tools/target-charon-miri
+charon cargo --preset=aeneas --sysroot miri --start-from ecdsa_spartan2::prover::verify_linked --dest-file /workspace/zkID-verifier-extraction/verification/ecdsa-spartan2/baseline/artifacts/ecdsa_spartan2.llbc -- --locked --lib --no-default-features
+
+coverage_validation (exit 0)
+cwd: /workspace/zkID-verifier-extraction/wallet-unit-poc/ecdsa-spartan2
+/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python3 /workspace/zkID-verifier-extraction/verification/ecdsa-spartan2/baseline/summarize_llbc.py /workspace/zkID-verifier-extraction/verification/ecdsa-spartan2/baseline/artifacts/ecdsa_spartan2.llbc /workspace/zkID-verifier-extraction/verification/ecdsa-spartan2/baseline/artifacts /workspace/zkID-verifier-extraction/verification/ecdsa-spartan2/baseline/artifacts/aeneas.log
+
+aeneas (exit 2)
+cwd: /workspace/zkID-verifier-extraction/wallet-unit-poc/ecdsa-spartan2
+aeneas -backend lean -core-models-lib -split-files -specs hax -dest /workspace/zkID-verifier-extraction/verification/ecdsa-spartan2/baseline/artifacts/lean /workspace/zkID-verifier-extraction/verification/ecdsa-spartan2/baseline/artifacts/ecdsa_spartan2.llbc
+
+coverage_summary (exit 0)
+cwd: /workspace/zkID-verifier-extraction/wallet-unit-poc/ecdsa-spartan2
+/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python3 /workspace/zkID-verifier-extraction/verification/ecdsa-spartan2/baseline/summarize_llbc.py /workspace/zkID-verifier-extraction/verification/ecdsa-spartan2/baseline/artifacts/ecdsa_spartan2.llbc /workspace/zkID-verifier-extraction/verification/ecdsa-spartan2/baseline/artifacts /workspace/zkID-verifier-extraction/verification/ecdsa-spartan2/baseline/artifacts/aeneas.log
+
+dependency_integrity_after (exit 0)
+cwd: /workspace/zkID-verifier-extraction/wallet-unit-poc/ecdsa-spartan2
+/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python3 /workspace/zkID-verifier-extraction/verification/ecdsa-spartan2/baseline/verify_dependencies.py /workspace/zkID-verifier-extraction /workspace/zkID-verifier-extraction/verification/ecdsa-spartan2/baseline/artifacts/.cargo-metadata.json /tmp/openac-baseline-input-recheck-oc7nmt7d
+
+gzip -n -c /workspace/zkID-verifier-extraction/verification/ecdsa-spartan2/baseline/artifacts/ecdsa_spartan2.llbc > /workspace/zkID-verifier-extraction/verification/ecdsa-spartan2/baseline/artifacts/ecdsa_spartan2.llbc.gz

@@ -1,0 +1,2 @@
+Cargo metadata captured and summarized in dependencies.json.
+warning: unused config key `build.default-features` in `/workspace/zkID-verifier-extraction/wallet-unit-poc/ecdsa-spartan2/.cargo/config.toml`

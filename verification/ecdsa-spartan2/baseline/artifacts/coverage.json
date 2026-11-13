@@ -1,0 +1,437 @@
+{
+  "input": "/workspace/zkID-verifier-extraction/verification/ecdsa-spartan2/baseline/artifacts/ecdsa_spartan2.llbc",
+  "input_sha256": "9c25f330add0a14591377a6e86979944d535cf374b76be26b20d026aea667f9d",
+  "charon_version": "0.1.304",
+  "extraction_validation": "passed",
+  "has_errors": false,
+  "options": {
+    "preset": "Aeneas",
+    "sysroot": "miri",
+    "start_from": [
+      "ecdsa_spartan2::prover::verify_linked"
+    ]
+  },
+  "name_format": "Rust path identifiers and builtin names; generic impl signatures abbreviated as {impl}; IDs disambiguate declarations",
+  "metric_scope": "Counts describe serialized LLBC function declarations. Charon may retain auxiliary declarations for pretty-printing; these counts do not establish exact reachable-body coverage or runtime coverage.",
+  "function_body_counts": {
+    "total": 619,
+    "structured": 2,
+    "opaque": 617,
+    "other": 0
+  },
+  "structured_functions": [
+    {
+      "kind": "Fun",
+      "id": 11,
+      "name": "ecdsa_spartan2::prover::verify_linked",
+      "source": {
+        "file_id": 5,
+        "file": "src/prover.rs",
+        "begin": {
+          "line": 434,
+          "col": 0
+        },
+        "end": {
+          "line": 451,
+          "col": 1
+        }
+      },
+      "body_kind": "structured"
+    },
+    {
+      "kind": "Fun",
+      "id": 52,
+      "name": "Tuple[2]::{impl trait#23}::DropGlue",
+      "source": {
+        "file_id": 0,
+        "file": "src/lib.rs",
+        "begin": {
+          "line": 1,
+          "col": 0
+        },
+        "end": {
+          "line": 1,
+          "col": 0
+        }
+      },
+      "body_kind": "structured"
+    }
+  ],
+  "target": {
+    "kind": "Fun",
+    "id": 11,
+    "name": "ecdsa_spartan2::prover::verify_linked",
+    "source": {
+      "file_id": 5,
+      "file": "src/prover.rs",
+      "begin": {
+        "line": 434,
+        "col": 0
+      },
+      "end": {
+        "line": 451,
+        "col": 1
+      }
+    },
+    "body_kind": "structured",
+    "status": "structured",
+    "item_has_errors": false
+  },
+  "target_direct_calls_metric_scope": "Literal syntactic Call nodes in the target body with direct Regular/Fun callees, grouped by declaration ID. Generic signature references and drop function references are not calls; these counts do not establish dynamic execution counts or reachable runtime coverage.",
+  "target_direct_calls": [
+    {
+      "kind": "Fun",
+      "id": 20,
+      "name": "spartan2::zk_spartan::{impl trait#8}::verify",
+      "source": {
+        "file_id": 10,
+        "file": "/cargo/git/checkouts/spartan2-44f7102e5f8bf4df/d687dbb/src/zk_spartan.rs",
+        "begin": {
+          "line": 241,
+          "col": 2
+        },
+        "end": {
+          "line": 241,
+          "col": 82
+        }
+      },
+      "body_kind": "opaque",
+      "callsite_count": 2
+    },
+    {
+      "kind": "Fun",
+      "id": 21,
+      "name": "core::result::{impl}::ok",
+      "source": {
+        "file_id": 27,
+        "file": "/rustc/library/core/src/result.rs",
+        "begin": {
+          "line": 709,
+          "col": 4
+        },
+        "end": {
+          "line": 712,
+          "col": 28
+        }
+      },
+      "body_kind": "opaque",
+      "callsite_count": 2
+    },
+    {
+      "kind": "Fun",
+      "id": 22,
+      "name": "core::option::{impl trait#14}::branch",
+      "source": {
+        "file_id": 20,
+        "file": "/rustc/library/core/src/option.rs",
+        "begin": {
+          "line": 2875,
+          "col": 4
+        },
+        "end": {
+          "line": 2875,
+          "col": 64
+        }
+      },
+      "body_kind": "opaque",
+      "callsite_count": 2
+    },
+    {
+      "kind": "Fun",
+      "id": 23,
+      "name": "core::option::{impl trait#17}::from_residual",
+      "source": {
+        "file_id": 20,
+        "file": "/rustc/library/core/src/option.rs",
+        "begin": {
+          "line": 2889,
+          "col": 4
+        },
+        "end": {
+          "line": 2889,
+          "col": 49
+        }
+      },
+      "body_kind": "opaque",
+      "callsite_count": 2
+    },
+    {
+      "kind": "Fun",
+      "id": 24,
+      "name": "spartan2::zk_spartan::{impl}::comm_W_shared",
+      "source": {
+        "file_id": 10,
+        "file": "/cargo/git/checkouts/spartan2-44f7102e5f8bf4df/d687dbb/src/zk_spartan.rs",
+        "begin": {
+          "line": 422,
+          "col": 2
+        },
+        "end": {
+          "line": 422,
+          "col": 62
+        }
+      },
+      "body_kind": "opaque",
+      "callsite_count": 2
+    },
+    {
+      "kind": "Fun",
+      "id": 25,
+      "name": "core::option::{impl}::is_none",
+      "source": {
+        "file_id": 20,
+        "file": "/rustc/library/core/src/option.rs",
+        "begin": {
+          "line": 682,
+          "col": 4
+        },
+        "end": {
+          "line": 682,
+          "col": 39
+        }
+      },
+      "body_kind": "opaque",
+      "callsite_count": 2
+    },
+    {
+      "kind": "Fun",
+      "id": 26,
+      "name": "core::cmp::impls::{impl trait#18}::ne",
+      "source": {
+        "file_id": 34,
+        "file": "/rustc/library/core/src/cmp.rs",
+        "begin": {
+          "line": 2465,
+          "col": 8
+        },
+        "end": {
+          "line": 2465,
+          "col": 40
+        }
+      },
+      "body_kind": "opaque",
+      "callsite_count": 1
+    }
+  ],
+  "target_opaque_spartan_verification_calls": [
+    {
+      "kind": "Fun",
+      "id": 20,
+      "name": "spartan2::zk_spartan::{impl trait#8}::verify",
+      "source": {
+        "file_id": 10,
+        "file": "/cargo/git/checkouts/spartan2-44f7102e5f8bf4df/d687dbb/src/zk_spartan.rs",
+        "begin": {
+          "line": 241,
+          "col": 2
+        },
+        "end": {
+          "line": 241,
+          "col": 82
+        }
+      },
+      "body_kind": "opaque",
+      "callsite_count": 2
+    }
+  ],
+  "relevant_curve_declarations": [
+    {
+      "kind": "Type",
+      "id": 56,
+      "name": "halo2curves::curve::Coordinates",
+      "source": {
+        "file_id": 57,
+        "file": "/cargo/registry/src/index.crates.io-1949cf8c6b5b557f/halo2curves-0.9.0/src/curve.rs",
+        "begin": {
+          "line": 112,
+          "col": 0
+        },
+        "end": {
+          "line": 112,
+          "col": 38
+        }
+      },
+      "generics": {
+        "region_count": 0,
+        "type_parameters": [
+          "C"
+        ],
+        "const_parameters": [],
+        "trait_clause_count": 1,
+        "type_constraint_count": 0
+      }
+    },
+    {
+      "kind": "TraitDecl",
+      "id": 43,
+      "name": "halo2curves::curve::CurveAffine",
+      "source": {
+        "file_id": 57,
+        "file": "/cargo/registry/src/index.crates.io-1949cf8c6b5b557f/halo2curves-0.9.0/src/curve.rs",
+        "begin": {
+          "line": 72,
+          "col": 0
+        },
+        "end": {
+          "line": 81,
+          "col": 45
+        }
+      },
+      "generics": {
+        "region_count": 0,
+        "type_parameters": [
+          "Self"
+        ],
+        "const_parameters": [],
+        "trait_clause_count": 0,
+        "type_constraint_count": 2
+      },
+      "associated_types": [
+        "ScalarExt",
+        "Base",
+        "CurveExt",
+        "Self_Clause7_Clause0_Repr",
+        "Self_Clause9_Clause0_Repr",
+        "Self_Clause11_Base",
+        "Self_Clause11_Clause0_Clause0_Clause0_Scalar",
+        "Self_Clause11_Clause0_Clause0_Clause0_Clause13_Repr",
+        "Self_Clause11_Clause0_Clause1_Clause0_Scalar",
+        "Self_Clause11_Clause0_Clause1_Clause0_Clause13_Repr",
+        "Self_Clause11_Clause0_Clause1_Clause1_Repr",
+        "Self_Clause11_Clause1_Clause13_Repr",
+        "Self_Clause11_Clause6_Clause0_Repr",
+        "Self_Clause11_Clause7_Clause0_Repr",
+        "Self_Clause11_Clause10_Output"
+      ]
+    },
+    {
+      "kind": "TraitDecl",
+      "id": 75,
+      "name": "halo2curves::curve::CurveExt",
+      "source": {
+        "file_id": 57,
+        "file": "/cargo/registry/src/index.crates.io-1949cf8c6b5b557f/halo2curves-0.9.0/src/curve.rs",
+        "begin": {
+          "line": 19,
+          "col": 0
+        },
+        "end": {
+          "line": 25,
+          "col": 40
+        }
+      },
+      "generics": {
+        "region_count": 0,
+        "type_parameters": [
+          "Self",
+          "Self_ScalarExt",
+          "Self_Base",
+          "Self_AffineExt",
+          "Self_Clause0_Clause0_Clause0_Scalar",
+          "Self_Clause0_Clause0_Clause0_Clause13_Repr",
+          "Self_Clause0_Clause1_Clause0_Scalar",
+          "Self_Clause0_Clause1_Clause0_Clause13_Repr",
+          "Self_Clause0_Clause1_Clause1_Repr",
+          "Self_Clause1_Clause13_Repr",
+          "Self_Clause6_Clause0_Repr",
+          "Self_Clause7_Clause0_Repr",
+          "Self_Clause10_Output"
+        ],
+        "const_parameters": [],
+        "trait_clause_count": 0,
+        "type_constraint_count": 3
+      },
+      "associated_types": []
+    }
+  ],
+  "opaque_spartan_verification_declarations": [
+    {
+      "kind": "Fun",
+      "id": 20,
+      "name": "spartan2::zk_spartan::{impl trait#8}::verify",
+      "source": {
+        "file_id": 10,
+        "file": "/cargo/git/checkouts/spartan2-44f7102e5f8bf4df/d687dbb/src/zk_spartan.rs",
+        "begin": {
+          "line": 241,
+          "col": 2
+        },
+        "end": {
+          "line": 241,
+          "col": 82
+        }
+      },
+      "body_kind": "opaque"
+    }
+  ],
+  "ordered_groups": {
+    "serialized_field": "ordered_decls",
+    "available": true,
+    "total": 1163,
+    "selection": "all mixed groups and groups containing target or relevant declarations",
+    "groups": [
+      {
+        "index": 686,
+        "kind": "Mixed",
+        "recursion": "Rec",
+        "declarations": [
+          {
+            "kind": "TraitDecl",
+            "id": 75,
+            "name": "halo2curves::curve::CurveExt"
+          },
+          {
+            "kind": "TraitDecl",
+            "id": 43,
+            "name": "halo2curves::curve::CurveAffine"
+          },
+          {
+            "kind": "Type",
+            "id": 56,
+            "name": "halo2curves::curve::Coordinates"
+          }
+        ]
+      },
+      {
+        "index": 1160,
+        "kind": "Fun",
+        "recursion": "NonRec",
+        "declarations": [
+          {
+            "kind": "Fun",
+            "id": 20,
+            "name": "spartan2::zk_spartan::{impl trait#8}::verify"
+          }
+        ]
+      },
+      {
+        "index": 1162,
+        "kind": "Fun",
+        "recursion": "NonRec",
+        "declarations": [
+          {
+            "kind": "Fun",
+            "id": 11,
+            "name": "ecdsa_spartan2::prover::verify_linked"
+          }
+        ]
+      }
+    ]
+  },
+  "first_mixed_group_diagnostic": {
+    "found": true,
+    "names": [
+      "halo2curves::curve::CurveExt",
+      "halo2curves::curve::CurveAffine",
+      "halo2curves::curve::Coordinates"
+    ],
+    "lines": [
+      "[Error] Detected groups of mixed mutually recursive definitions (such as a type mutually recursive with a function, or a function mutually recursive with a trait implementation):",
+      "",
+      "# Group 1:",
+      "- trait decl(Source: '/cargo/registry/src/index.crates.io-1949cf8c6b5b557f/halo2curves-0.9.0/src/curve.rs', lines 19:0-25:40): halo2curves::curve::CurveExt",
+      "- trait decl(Source: '/cargo/registry/src/index.crates.io-1949cf8c6b5b557f/halo2curves-0.9.0/src/curve.rs', lines 72:0-81:45): halo2curves::curve::CurveAffine",
+      "- type decl(Source: '/cargo/registry/src/index.crates.io-1949cf8c6b5b557f/halo2curves-0.9.0/src/curve.rs', lines 112:0-112:38): halo2curves::curve::Coordinates"
+    ]
+  }
+}

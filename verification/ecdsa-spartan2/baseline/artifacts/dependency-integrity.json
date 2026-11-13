@@ -1,0 +1,75 @@
+{
+  "cargo_configuration": {
+    "applicable_manifests": [
+      {
+        "path": "/workspace/zkID-verifier-extraction/wallet-unit-poc/ecdsa-spartan2/Cargo.toml",
+        "sha256": "4a4663df23ca76776a7b3053a2ad5e8bd3391a4f1f8e3087e7e311be38a1c700",
+        "top_level_names": [
+          "bin",
+          "build-dependencies",
+          "dependencies",
+          "features",
+          "lib",
+          "package",
+          "profile"
+        ]
+      }
+    ],
+    "cargo_home": "/workspace/formal-tools/cargo",
+    "configs": [
+      {
+        "build_default_features": false,
+        "path": "/workspace/zkID-verifier-extraction/wallet-unit-poc/ecdsa-spartan2/.cargo/config.toml",
+        "sha256": "2028f8f48c5f5846a8d4b82ef690cd504fcd52da3f659bb723a27c73821d6fee",
+        "top_level_names": [
+          "build"
+        ]
+      }
+    ],
+    "override_environment_names": []
+  },
+  "dependencies": {
+    "halo2curves": {
+      "archive_path": "/workspace/formal-tools/cargo/registry/cache/index.crates.io-1949cf8c6b5b557f/halo2curves-0.9.0.crate",
+      "archive_sha256": "f82f3e7809d6118c2afbde9667b3ba5c7621723df3729cc2157fac39121ecb62",
+      "cargo_checksum_metadata": {
+        "present": false
+      },
+      "excluded_generated_markers": [
+        ".cargo-checksum.json",
+        ".cargo-ok"
+      ],
+      "file_count": 99,
+      "file_manifest": "halo2curves-files.sha256",
+      "file_manifest_sha256": "9d33a9137c5385d5055ada6d1cb22e4d2eea6571e91ba7c686a85f044be36fb6",
+      "lock_checksum": "f82f3e7809d6118c2afbde9667b3ba5c7621723df3729cc2157fac39121ecb62",
+      "manifest_path": "/workspace/formal-tools/cargo/registry/src/index.crates.io-1949cf8c6b5b557f/halo2curves-0.9.0/Cargo.toml",
+      "package_id": "registry+https://github.com/rust-lang/crates.io-index#halo2curves@0.9.0",
+      "source_directory": "/workspace/formal-tools/cargo/registry/src/index.crates.io-1949cf8c6b5b557f/halo2curves-0.9.0",
+      "verification_method": "published crate checksum and complete extracted-file byte comparison",
+      "version": "0.9.0"
+    },
+    "spartan2": {
+      "allowed_untracked_markers": [
+        ".cargo-ok"
+      ],
+      "checkout": "/workspace/formal-tools/cargo/git/checkouts/spartan2-44f7102e5f8bf4df/d687dbb",
+      "file_manifest": "spartan2-files.sha256",
+      "file_manifest_sha256": "257e0c01680eb719ed320c053aa4fa1ecc5a2bf9129f14b818cddb198c293dca",
+      "git_object_format": "sha1",
+      "git_status": [
+        "?? .cargo-ok"
+      ],
+      "head": "d687dbb639eccbdd21e62fecec97c5826bc4dbbf",
+      "manifest_path": "/workspace/formal-tools/cargo/git/checkouts/spartan2-44f7102e5f8bf4df/d687dbb/Cargo.toml",
+      "package_id": "git+https://github.com/0xVikasRushi/Spartan2.git?branch=openac-sdk#spartan2@0.4.0",
+      "tracked_bytes_match_head": true,
+      "tracked_file_count": 48,
+      "tree": "0e603b48ed1616753fd15b93109a297644590038",
+      "version": "0.4.0"
+    }
+  },
+  "lockfile_sha256": "8948a2771f85076fba88b210f86edf4552497ef2d99b9121e306e76c1ba32cde",
+  "schema_version": 1,
+  "status": "verified"
+}
