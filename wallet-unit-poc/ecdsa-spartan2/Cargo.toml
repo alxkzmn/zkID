@@ -16,6 +16,10 @@ default = ["native-witness"]
 # Enable native witness calculation via witnesscalc_adapter (requires C++ toolchain).
 # Disable this for WASM builds where witnesses are generated in JavaScript.
 native-witness = ["dep:witnesscalc-adapter"]
+# Aeneas stops on Rayon's worker-loop control flow and tracing's mutually
+# dependent event declarations. Select serial verification and remove diagnostic
+# code before extraction.
+aeneas = ["spartan2/aeneas"]
 
 [dependencies]
 spartan2 = { git = "https://github.com/0xVikasRushi/Spartan2.git", branch = "openac-sdk", default-features = false }
@@ -40,3 +44,25 @@ witnesscalc-adapter = { git = "https://github.com/zkmopro/witnesscalc_adapter.gi
 
 [profile.release]
 debug = true
+
+# Cargo patches apply to the complete dependency graph, including dependencies
+# brought in by Circom Scotia. These pins select the reviewed upstream forks.
+[patch.crates-io]
+# Aeneas rejects recursive curve and field trait definitions; this fork separates the
+# required types and methods.
+halo2curves = { git = "https://github.com/alxkzmn/halo2curves.git", rev = "6d407b044c121f39dcceabd1e61ddd0cf8bd1f9d" }
+# Aeneas rejects the array-initialization closure's nested mutable references; this fork
+# moves existing references into the closure.
+generic-array = { git = "https://github.com/alxkzmn/generic-array.git", rev = "ca686764b0ea4316e2e7d90f77102ec8c57c844e" }
+# Aeneas rejects serialization helpers that recursively require their callers; this fork
+# requires only configuration options.
+bincode = { git = "https://github.com/alxkzmn/bincode.git", rev = "e6248e027a022002014dc3bfb8364f04d3e4ae1d" }
+# Aeneas rejects the hash-update closure's nested mutable references; this fork moves its
+# existing core reference into the closure.
+digest = { git = "https://github.com/alxkzmn/traits.git", rev = "f014b7adb717b506b25f05bba14124cf7b2ae5ce" }
+
+# Replace the upstream Spartan package for direct and transitive consumers.
+# Its extraction feature retains the cryptographic operations and selects
+# control flow that Charon and Aeneas can process.
+[patch."https://github.com/0xVikasRushi/Spartan2.git"]
+spartan2 = { git = "https://github.com/alxkzmn/Spartan2.git", rev = "028e565b3131feaa66addaab446894f0b477595c" }

@@ -295,8 +295,7 @@ dependencies = [
 [[package]]
 name = "bincode"
 version = "1.3.3"
-source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "b1f45e9417d87227c7a56d22e471c6206462cba514c7590c09aff4cf6d1ddcad"
+source = "git+https://github.com/alxkzmn/bincode.git?rev=e6248e027a022002014dc3bfb8364f04d3e4ae1d#e6248e027a022002014dc3bfb8364f04d3e4ae1d"
 dependencies = [
  "serde",
 ]
@@ -506,8 +505,7 @@ dependencies = [
 [[package]]
 name = "digest"
 version = "0.10.7"
-source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "9ed9a281f7bc9b7576e61468ba615a66a5c8cfdff42420a70aa82701a3b1e292"
+source = "git+https://github.com/alxkzmn/traits.git?rev=f014b7adb717b506b25f05bba14124cf7b2ae5ce#f014b7adb717b506b25f05bba14124cf7b2ae5ce"
 dependencies = [
  "block-buffer",
  "crypto-common",
@@ -665,8 +663,7 @@ checksum = "e6d5a32815ae3f33302d95fdcb2ce17862f8c65363dcfd29360480ba1001fc9c"
 [[package]]
 name = "generic-array"
 version = "0.14.7"
-source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "85649ca51fd72272d7821adaf274ad91c288277713d9c18820d8499a7ff69e9a"
+source = "git+https://github.com/alxkzmn/generic-array.git?rev=ca686764b0ea4316e2e7d90f77102ec8c57c844e#ca686764b0ea4316e2e7d90f77102ec8c57c844e"
 dependencies = [
  "typenum",
  "version_check",
@@ -711,8 +708,7 @@ dependencies = [
 [[package]]
 name = "halo2curves"
 version = "0.9.0"
-source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "f82f3e7809d6118c2afbde9667b3ba5c7621723df3729cc2157fac39121ecb62"
+source = "git+https://github.com/alxkzmn/halo2curves.git?rev=6d407b044c121f39dcceabd1e61ddd0cf8bd1f9d#6d407b044c121f39dcceabd1e61ddd0cf8bd1f9d"
 dependencies = [
  "digest 0.10.7",
  "ff",
@@ -739,8 +735,7 @@ dependencies = [
 [[package]]
 name = "halo2derive"
 version = "0.2.0"
-source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "a0d74794c1b24716c5abf5d6bfd98ee3c2d346bc67da374ba21d80adb38c336c"
+source = "git+https://github.com/alxkzmn/halo2curves.git?rev=6d407b044c121f39dcceabd1e61ddd0cf8bd1f9d#6d407b044c121f39dcceabd1e61ddd0cf8bd1f9d"
 dependencies = [
  "num-bigint 0.4.6",
  "num-integer",
@@ -1434,7 +1429,7 @@ checksum = "67b1b7a3b5fe4f1376887184045fcf45c69e92af734b7aaddc05fb777b6fbd03"
 [[package]]
 name = "spartan2"
 version = "0.4.0"
-source = "git+https://github.com/0xVikasRushi/Spartan2.git?branch=openac-sdk#d687dbb639eccbdd21e62fecec97c5826bc4dbbf"
+source = "git+https://github.com/alxkzmn/Spartan2.git?rev=028e565b3131feaa66addaab446894f0b477595c#028e565b3131feaa66addaab446894f0b477595c"
 dependencies = [
  "bellpepper",
  "bellpepper-core",
